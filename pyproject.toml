@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inferkit"
+version = "0.1.0"
+description = "A lightweight toolkit for LLM inference, prompting, and agent workflows."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "ErvinTse", email = "36804877+helbok@users.noreply.github.com" }]
+requires-python = ">=3.7"
+keywords = ["llm", "inference", "agents", "prompts", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "httpx>=0.20.0",
+    "pydantic>=1.9.0",
+    "tenacity>=8.0.0",
+    "tiktoken>=0.3.0",
+    "numpy>=1.21.0",
+    "typing-extensions>=4.0.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0.0", "pytest-asyncio>=0.18.0", "respx>=0.19.0"]
+dev = ["ruff>=0.0.250", "mypy>=0.950", "build>=0.8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
