@@ -7,3 +7,4 @@
 
 | Date | Version | Milestone |
 | ---- | ------- | --------- |
+| 2019-04-16 | v0.1.0 | Provider-agnostic inference client |
