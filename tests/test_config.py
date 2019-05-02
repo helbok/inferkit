@@ -21,3 +21,8 @@ def test_validate_rejects_bad_max_tokens():
     cfg = Config(max_tokens=0)
     with pytest.raises(ConfigurationError):
         cfg.validate()
+
+
+def test_edge_case_config_014():
+    from inferkit.config import Config
+    assert Config().temperature == 0.7
