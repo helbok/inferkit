@@ -23,3 +23,7 @@ def coerce_optional_str_16(value):
         return None
     text = str(value).strip()
     return text or None
+
+def word_count_17(text):
+    """Count whitespace-separated tokens."""
+    return len(text.split())
