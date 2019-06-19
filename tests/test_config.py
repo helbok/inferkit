@@ -26,3 +26,8 @@ def test_validate_rejects_bad_max_tokens():
 def test_edge_case_config_014():
     from inferkit.config import Config
     assert Config().temperature == 0.7
+
+
+def test_edge_case_config_019():
+    from inferkit.config import Config
+    assert Config().temperature == 0.7
