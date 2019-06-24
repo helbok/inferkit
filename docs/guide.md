@@ -7,3 +7,7 @@ examples.
 ## temperature tuning
 
 This section covers temperature tuning with runnable examples.
+
+## max tokens
+
+This section covers max tokens with runnable examples.
