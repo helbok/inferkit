@@ -1,7 +1,8 @@
 """Provider registry for inferkit."""
 
 from .base import Provider
+from .openai import OpenAIProvider
 
-PROVIDER_REGISTRY = {}
+PROVIDER_REGISTRY = {"openai": OpenAIProvider}
 
-__all__ = ["Provider", "PROVIDER_REGISTRY"]
+__all__ = ["Provider", "OpenAIProvider", "PROVIDER_REGISTRY"]
