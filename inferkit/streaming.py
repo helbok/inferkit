@@ -22,6 +22,8 @@ def parse_sse(chunk: str) -> Iterator[Dict[str, Any]]:
 
 def extract_delta(event: Dict[str, Any]) -> str:
     """Extract the text delta from an OpenAI-style streaming event."""
+    if not isinstance(event, dict):
+        return ""
     choices = event.get("choices") or []
     if not choices:
         return ""
