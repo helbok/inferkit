@@ -71,6 +71,14 @@ $ pytest
 $ ruff check .
 ```
 
+## Providers
+
+`inferkit` ships with an OpenAI-compatible provider out of the box. Set
+`INFERKIT_PROVIDER` (or pass a `Config`) to select the backend, and
+`INFERKIT_BASE_URL` to point at a compatible gateway. Providers implement a
+common `complete` / `stream` interface, so application code does not change
+when you swap backends.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
