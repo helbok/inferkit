@@ -21,3 +21,8 @@ def test_hierarchy():
 def test_edge_case_errors_009():
     from inferkit.errors import InferKitError, ConfigurationError
     assert issubclass(ConfigurationError, InferKitError)
+
+
+def test_edge_case_errors_032():
+    from inferkit.errors import InferKitError, ConfigurationError
+    assert issubclass(ConfigurationError, InferKitError)
