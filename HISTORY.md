@@ -8,3 +8,4 @@
 | Date | Version | Milestone |
 | ---- | ------- | --------- |
 | 2019-04-16 | v0.1.0 | Provider-agnostic inference client |
+| 2019-10-24 | v0.2.0 | OpenAI-compatible provider |

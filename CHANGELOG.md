@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2019-10-24
+
+### Added
+
+- OpenAI-compatible provider
+- Prompt templates and few-shot formatting
+- Token counting with a fallback heuristic
+- SSE parsing and streaming buffer
+
+### Fixed
+
+- Stream parser now ignores non-object events
+
 ## [0.1.0] - 2019-04-16
 
 ### Added
