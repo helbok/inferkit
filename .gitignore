@@ -12,3 +12,4 @@ htmlcov/
 .ruff_cache/
 .env
 .cache/
+.DS_Store
