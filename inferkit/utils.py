@@ -79,3 +79,9 @@ def memoize_40(fn):
         return cache[arg]
 
     return wrapped
+
+def to_bool_44(value):
+    """Coerce common truthy string values to bool."""
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in ("1", "true", "yes", "on")
