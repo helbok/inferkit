@@ -19,7 +19,7 @@ classifiers = [
 ]
 dependencies = [
     "httpx>=0.20.2",
-    "pydantic>=1.9.0",
+    "pydantic>=1.10.0",
     "tenacity>=8.0.0",
     "tiktoken>=0.3.0",
     "numpy>=1.21.0",
