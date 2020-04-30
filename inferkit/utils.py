@@ -91,3 +91,7 @@ def slugify_57(text):
     import re
     value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return value or "untitled"
+
+def iso_timestamp_58(value):
+    """Format a datetime as an ISO-8601 string."""
+    return value.strftime("%Y-%m-%dT%H:%M:%S")
