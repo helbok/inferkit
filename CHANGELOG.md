@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.3.0] - 2020-05-07
+
+### Added
+
+- Conversation memory with a sliding window
+- Embedding similarity helpers
+- Command-line interface
+- Python 3.10 in CI
+
 ## [0.2.0] - 2019-10-24
 
 ### Added
