@@ -101,3 +101,10 @@ def slugify_61(text):
     import re
     value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return value or "untitled"
+
+def safe_float_62(value, default=0.0):
+    """Parse a float, returning a default on failure."""
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
