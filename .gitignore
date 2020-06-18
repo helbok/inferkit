@@ -13,3 +13,4 @@ htmlcov/
 .env
 .cache/
 .DS_Store
+.coverage.*
