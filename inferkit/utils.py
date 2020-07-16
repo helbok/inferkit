@@ -115,3 +115,9 @@ def first_non_none_63(values):
         if value is not None:
             return value
     return None
+
+def merge_dicts_67(base, override):
+    """Return a shallow copy of base with override keys applied."""
+    merged = dict(base)
+    merged.update(override)
+    return merged
