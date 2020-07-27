@@ -121,3 +121,9 @@ def merge_dicts_67(base, override):
     merged = dict(base)
     merged.update(override)
     return merged
+
+def load_json_68(path):
+    """Read and parse a JSON file."""
+    import json
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)
