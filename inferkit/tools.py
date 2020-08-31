@@ -70,6 +70,8 @@ class Toolbox:
         self._tools: Dict[str, Tool] = {t.name: t for t in tools or []}
 
     def register(self, tool: Tool) -> None:
+        if tool.name in self._tools:
+            raise ToolError(f"duplicate tool name: {tool.name}")
         self._tools[tool.name] = tool
 
     def schemas(self) -> List[Dict[str, Any]]:
