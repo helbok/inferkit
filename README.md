@@ -79,6 +79,13 @@ $ ruff check .
 common `complete` / `stream` interface, so application code does not change
 when you swap backends.
 
+## Tools
+
+Tools expose Python functions to a model as JSON-schema function calls. Use
+the `@tool` decorator to describe a function, register it in a `Toolbox`, and
+pass `Toolbox.schemas()` to a chat request. The model can then request tool
+calls, which `Toolbox.call` dispatches safely.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
