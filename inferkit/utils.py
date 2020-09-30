@@ -127,3 +127,13 @@ def load_json_68(path):
     import json
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
+
+def unique_preserve_order_78(items):
+    """Deduplicate a sequence while preserving first-seen order."""
+    seen = set()
+    out = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
