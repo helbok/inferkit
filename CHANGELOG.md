@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.4.0] - 2020-11-19
+
+### Added
+
+- Function-calling toolbox
+- @tool decorator with annotation-based schemas
+
+### Fixed
+
+- Duplicate tool names are rejected at registration
+
 ## [0.3.0] - 2020-05-07
 
 ### Added
