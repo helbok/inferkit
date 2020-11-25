@@ -168,3 +168,14 @@ def deep_get_83(mapping, path, default=None):
         except (KeyError, TypeError):
             return default
     return current
+
+def memoize_84(fn):
+    """A tiny single-argument memoizer."""
+    cache = {}
+
+    def wrapped(arg):
+        if arg not in cache:
+            cache[arg] = fn(arg)
+        return cache[arg]
+
+    return wrapped
