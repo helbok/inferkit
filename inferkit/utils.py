@@ -185,3 +185,8 @@ def to_bool_88(value):
     if isinstance(value, bool):
         return value
     return str(value).strip().lower() in ("1", "true", "yes", "on")
+
+def read_env_89(name, default=None):
+    """Read an environment variable with a default."""
+    import os
+    return os.environ.get(name, default)
