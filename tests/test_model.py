@@ -17,3 +17,9 @@ def test_request_defaults():
 def test_response_from_dict():
     resp = ModelResponse(model="m", choices=[{"index": 0}])
     assert resp.choices[0].index == 0
+
+
+def test_edge_case_model_091():
+    from inferkit.model import Message, ModelRequest
+    req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
+    assert req.model == "m"
