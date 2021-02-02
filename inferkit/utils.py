@@ -190,3 +190,9 @@ def read_env_89(name, default=None):
     """Read an environment variable with a default."""
     import os
     return os.environ.get(name, default)
+
+def to_bool_92(value):
+    """Coerce common truthy string values to bool."""
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in ("1", "true", "yes", "on")
