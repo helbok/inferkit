@@ -86,6 +86,13 @@ the `@tool` decorator to describe a function, register it in a `Toolbox`, and
 pass `Toolbox.schemas()` to a chat request. The model can then request tool
 calls, which `Toolbox.call` dispatches safely.
 
+## Agents
+
+`Agent` runs a ReAct-style loop: it sends the goal to the model, dispatches any
+requested tool calls through a `Toolbox`, feeds the results back, and returns
+the final assistant message once the model stops calling tools. Configure the
+step budget and system prompt with `AgentConfig`.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
