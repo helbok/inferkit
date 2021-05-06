@@ -206,3 +206,9 @@ def slugify_101(text):
 def iso_timestamp_102(value):
     """Format a datetime as an ISO-8601 string."""
     return value.strftime("%Y-%m-%dT%H:%M:%S")
+
+def slugify_105(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
