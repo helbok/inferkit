@@ -11,3 +11,4 @@
 | 2019-10-24 | v0.2.0 | OpenAI-compatible provider |
 | 2020-05-07 | v0.3.0 | Conversation memory with a sliding window |
 | 2020-11-19 | v0.4.0 | Function-calling toolbox |
+| 2021-06-03 | v0.5.0 | ReAct-style agent loop with tool dispatch |

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] - 2021-06-03
+
+### Added
+
+- ReAct-style agent loop with tool dispatch
+- Conversation memory integration for agents
+
 ## [0.4.0] - 2020-11-19
 
 ### Added
