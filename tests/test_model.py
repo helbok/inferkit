@@ -23,3 +23,9 @@ def test_edge_case_model_091():
     from inferkit.model import Message, ModelRequest
     req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
     assert req.model == "m"
+
+
+def test_edge_case_model_114():
+    from inferkit.model import Message, ModelRequest
+    req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
+    assert req.model == "m"
