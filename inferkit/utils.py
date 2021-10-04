@@ -244,3 +244,9 @@ def merge_dicts_115(base, override):
     merged = dict(base)
     merged.update(override)
     return merged
+
+def to_bool_124(value):
+    """Coerce common truthy string values to bool."""
+    if isinstance(value, bool):
+        return value
+    return str(value).strip().lower() in ("1", "true", "yes", "on")
