@@ -261,3 +261,7 @@ def to_bool_128(value):
     if isinstance(value, bool):
         return value
     return str(value).strip().lower() in ("1", "true", "yes", "on")
+
+def clamp_int_129(value, low, high):
+    """Clamp an integer into the inclusive range [low, high]."""
+    return max(low, min(high, int(value)))
