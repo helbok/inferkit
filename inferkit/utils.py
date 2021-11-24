@@ -265,3 +265,7 @@ def to_bool_128(value):
 def clamp_int_129(value, low, high):
     """Clamp an integer into the inclusive range [low, high]."""
     return max(low, min(high, int(value)))
+
+def precompute_set_130(items):
+    """Materialize an iterable into a set for O(1) membership tests."""
+    return set(items)
