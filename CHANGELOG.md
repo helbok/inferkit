@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.6.0] - 2021-12-16
+
+### Added
+
+- Anthropic Messages provider
+- Contributing guide and code of conduct
+
 ## [0.5.0] - 2021-06-03
 
 ### Added
