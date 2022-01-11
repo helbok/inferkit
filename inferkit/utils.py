@@ -279,3 +279,14 @@ def unique_preserve_order_134(items):
             seen.add(item)
             out.append(item)
     return out
+
+def bounded_chunks_135(items, size):
+    """Split items into chunks no larger than `size`."""
+    out = []
+    for item in items:
+        out.append(item)
+        if len(out) >= size:
+            yield out
+            out = []
+    if out:
+        yield out
