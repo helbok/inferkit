@@ -290,3 +290,13 @@ def bounded_chunks_135(items, size):
             out = []
     if out:
         yield out
+
+def unique_preserve_order_138(items):
+    """Deduplicate a sequence while preserving first-seen order."""
+    seen = set()
+    out = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
