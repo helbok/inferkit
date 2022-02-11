@@ -300,3 +300,13 @@ def unique_preserve_order_138(items):
             seen.add(item)
             out.append(item)
     return out
+
+def deep_get_139(mapping, path, default=None):
+    """Fetch a nested key path from a dict-like object."""
+    current = mapping
+    for key in path:
+        try:
+            current = current[key]
+        except (KeyError, TypeError):
+            return default
+    return current
