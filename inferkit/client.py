@@ -56,3 +56,32 @@ class InferenceClient:
             **kwargs,
         )
         return self.provider.stream(request)
+
+    async def achat(
+        self,
+        messages: List[Message],
+        model: Optional[str] = None,
+        temperature: Optional[float] = None,
+        max_tokens: Optional[int] = None,
+        tools: Optional[List[dict]] = None,
+    ) -> ModelResponse:
+        """Run one chat completion asynchronously."""
+        request = ModelRequest(
+            model=model or self.config.model,
+            messages=messages,
+            temperature=temperature if temperature is not None else self.config.temperature,
+            max_tokens=max_tokens or self.config.max_tokens,
+            tools=tools,
+        )
+        return await self.provider.acomplete(request)
+
+    async def astream(self, messages: List[Message], model: Optional[str] = None, **kwargs):
+        """Stream a chat completion asynchronously."""
+        request = ModelRequest(
+            model=model or self.config.model,
+            messages=messages,
+            stream=True,
+            **kwargs,
+        )
+        async for delta in self.provider.astream(request):
+            yield delta
