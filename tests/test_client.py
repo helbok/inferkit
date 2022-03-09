@@ -28,3 +28,17 @@ def test_chat_uses_provider():
 def test_unknown_provider_raises():
     with pytest.raises(ConfigurationError):
         InferenceClient(Config(provider="does-not-exist"))
+
+
+def test_achat_uses_provider():
+    import asyncio
+
+    from inferkit.model import Message
+
+    class AsyncFake(FakeProvider):
+        async def acomplete(self, request):
+            return self.complete(request)
+
+    client = InferenceClient(Config(), provider=AsyncFake())
+    resp = asyncio.run(client.achat([Message(role="user", content="hi")]))
+    assert resp.choices[0].message.content == "ok"
