@@ -93,6 +93,12 @@ requested tool calls through a `Toolbox`, feeds the results back, and returns
 the final assistant message once the model stops calling tools. Configure the
 step budget and system prompt with `AgentConfig`.
 
+## Async usage
+
+Every synchronous call has an asynchronous twin. `achat` and `astream` run the
+same request through the provider's async path, which is useful inside
+`asyncio` servers and pipelines.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
