@@ -310,3 +310,9 @@ def deep_get_139(mapping, path, default=None):
         except (KeyError, TypeError):
             return default
     return current
+
+def slugify_149(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
