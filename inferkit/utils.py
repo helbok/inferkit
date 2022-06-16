@@ -333,3 +333,10 @@ def safe_float_154(value, default=0.0):
         return float(value)
     except (TypeError, ValueError):
         return default
+
+def first_non_none_155(values):
+    """Return the first non-None value, short-circuiting."""
+    for value in values:
+        if value is not None:
+            return value
+    return None
