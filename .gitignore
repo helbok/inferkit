@@ -17,3 +17,4 @@ htmlcov/
 *.log
 .cache/
 .DS_Store
+notebooks/
