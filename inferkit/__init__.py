@@ -1,6 +1,6 @@
 """inferkit: a lightweight toolkit for LLM inference and agent workflows."""
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 from .agent import Agent, AgentConfig
 from .client import InferenceClient
