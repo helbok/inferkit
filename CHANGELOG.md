@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.0] - 2022-07-06
+
+### Added
+
+- Async chat and streaming methods
+- Python 3.11 in CI
+
 ## [0.6.0] - 2021-12-16
 
 ### Added
