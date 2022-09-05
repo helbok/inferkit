@@ -62,3 +62,8 @@ class ModelResponse(BaseModel):
 
 
 Message.update_forward_refs()
+
+
+def response_text(response: "ModelResponse") -> str:
+    """Concatenate the text of every choice in a response."""
+    return "".join(choice.message.content for choice in response.choices)
