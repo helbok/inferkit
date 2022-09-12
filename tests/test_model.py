@@ -41,3 +41,13 @@ def test_edge_case_model_162():
     from inferkit.model import Message, ModelRequest
     req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
     assert req.model == "m"
+
+
+def test_response_text_joins_choices():
+    from inferkit.model import ModelResponse, response_text
+
+    resp = ModelResponse(choices=[
+        {"index": 0, "message": {"role": "assistant", "content": "a"}},
+        {"index": 1, "message": {"role": "assistant", "content": "b"}},
+    ])
+    assert response_text(resp) == "ab"
