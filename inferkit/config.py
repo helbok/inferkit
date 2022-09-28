@@ -39,6 +39,8 @@ class Config:
 
     def validate(self) -> None:
         """Raise ConfigurationError if the config is inconsistent."""
+        if not self.provider:
+            raise ConfigurationError("provider must not be empty")
         if not 0.0 <= self.temperature <= 2.0:
             raise ConfigurationError("temperature must be between 0 and 2")
         if self.max_tokens < 1:
