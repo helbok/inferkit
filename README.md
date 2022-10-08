@@ -99,6 +99,13 @@ Every synchronous call has an asynchronous twin. `achat` and `astream` run the
 same request through the provider's async path, which is useful inside
 `asyncio` servers and pipelines.
 
+## Error handling
+
+Provider failures map to a small, typed hierarchy: `AuthenticationError` for
+bad credentials, `RateLimitError` for 429s, and `ProviderError` for anything
+else. Catch `InferKitError` to handle every inferkit failure uniformly, or the
+specific subclasses to react differently.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
