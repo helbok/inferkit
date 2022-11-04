@@ -358,3 +358,9 @@ def merge_dicts_163(base, override):
     merged = dict(base)
     merged.update(override)
     return merged
+
+def slugify_173(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
