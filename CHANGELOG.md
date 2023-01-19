@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0] - 2023-01-19
+
+### Added
+
+- Stable 1.0 public API
+- Response text helper
+- Python 3.8 minimum
+
+### Fixed
+
+- Empty provider names are rejected at validation
+
 ## [0.7.0] - 2022-07-06
 
 ### Added

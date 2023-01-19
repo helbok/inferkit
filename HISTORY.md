@@ -14,3 +14,4 @@
 | 2021-06-03 | v0.5.0 | ReAct-style agent loop with tool dispatch |
 | 2021-12-16 | v0.6.0 | Anthropic Messages provider |
 | 2022-07-06 | v0.7.0 | Async chat and streaming methods |
+| 2023-01-19 | v1.0.0 | Stable 1.0 public API |
