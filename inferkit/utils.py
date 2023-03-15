@@ -406,3 +406,10 @@ def merge_dicts_187(base, override):
     merged = dict(base)
     merged.update(override)
     return merged
+
+def coerce_optional_str_188(value):
+    """Return None for blank strings, else the stripped value."""
+    if value is None:
+        return None
+    text = str(value).strip()
+    return text or None
