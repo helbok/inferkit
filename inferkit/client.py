@@ -85,3 +85,7 @@ class InferenceClient:
         )
         async for delta in self.provider.astream(request):
             yield delta
+
+    def batch(self, messages_list, model=None, **kwargs):
+        """Run several completions and return their responses in order."""
+        return [self.chat(messages, model=model, **kwargs) for messages in messages_list]
