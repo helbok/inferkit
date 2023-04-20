@@ -7,3 +7,7 @@ def test_registry_has_openai():
 
 def test_registry_has_anthropic():
     assert "anthropic" in PROVIDER_REGISTRY
+
+
+def test_registry_has_local():
+    assert "local" in PROVIDER_REGISTRY
