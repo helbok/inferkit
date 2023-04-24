@@ -42,3 +42,10 @@ def test_achat_uses_provider():
     client = InferenceClient(Config(), provider=AsyncFake())
     resp = asyncio.run(client.achat([Message(role="user", content="hi")]))
     assert resp.choices[0].message.content == "ok"
+
+
+def test_batch_returns_in_order():
+    client = InferenceClient(Config(), provider=FakeProvider())
+    msgs = [Message(role="user", content="a"), Message(role="user", content="b")]
+    responses = client.batch([[m] for m in msgs])
+    assert [r.choices[0].message.content for r in responses] == ["ok", "ok"]
