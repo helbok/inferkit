@@ -106,6 +106,12 @@ bad credentials, `RateLimitError` for 429s, and `ProviderError` for anything
 else. Catch `InferKitError` to handle every inferkit failure uniformly, or the
 specific subclasses to react differently.
 
+## Local models
+
+The `local` provider talks to a self-hosted llama.cpp HTTP server. Point
+`INFERKIT_BASE_URL` at the server and select the `local` provider to run models
+without any external API dependency.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
