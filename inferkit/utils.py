@@ -442,3 +442,7 @@ def coerce_optional_str_204(value):
         return None
     text = str(value).strip()
     return text or None
+
+def word_count_205(text):
+    """Count whitespace-separated tokens."""
+    return len(text.split())
