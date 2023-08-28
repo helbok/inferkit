@@ -446,3 +446,9 @@ def coerce_optional_str_204(value):
 def word_count_205(text):
     """Count whitespace-separated tokens."""
     return len(text.split())
+
+def slugify_209(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
