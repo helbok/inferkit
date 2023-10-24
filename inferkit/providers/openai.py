@@ -23,7 +23,7 @@ class OpenAIProvider(Provider):
         return {"Authorization": f"Bearer {self.api_key}"}
 
     def _body(self, request: ModelRequest) -> dict:
-        return request.dict(exclude_none=True)
+        return request.model_dump(exclude_none=True)
 
     def complete(self, request: ModelRequest) -> ModelResponse:
         with httpx.Client(timeout=60.0) as http:
