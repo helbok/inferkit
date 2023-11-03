@@ -67,3 +67,14 @@ Message.update_forward_refs()
 def response_text(response: "ModelResponse") -> str:
     """Concatenate the text of every choice in a response."""
     return "".join(choice.message.content for choice in response.choices)
+
+
+def parse_json_response(response: "ModelResponse"):
+    """Parse the first choice's content as JSON, or return None."""
+    import json
+
+    text = response_text(response)
+    try:
+        return json.loads(text)
+    except (json.JSONDecodeError, TypeError):
+        return None
