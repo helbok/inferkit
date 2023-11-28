@@ -112,6 +112,12 @@ The `local` provider talks to a self-hosted llama.cpp HTTP server. Point
 `INFERKIT_BASE_URL` at the server and select the `local` provider to run models
 without any external API dependency.
 
+## Structured output
+
+For JSON-mode responses, `parse_json_response` decodes the first choice's
+content and returns `None` when the model produces invalid JSON, so callers can
+fall back gracefully instead of crashing.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
