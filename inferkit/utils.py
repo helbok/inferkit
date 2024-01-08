@@ -469,3 +469,9 @@ def safe_float_214(value, default=0.0):
         return float(value)
     except (TypeError, ValueError):
         return default
+
+def slugify_225(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
