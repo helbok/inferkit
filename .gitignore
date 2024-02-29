@@ -20,3 +20,4 @@ htmlcov/
 notebooks/
 .env.local
 notebooks/
+*.prof
