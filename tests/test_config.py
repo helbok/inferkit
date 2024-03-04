@@ -116,3 +116,8 @@ def test_edge_case_config_207():
 def test_edge_case_config_228():
     from inferkit.config import Config
     assert Config().temperature == 0.7
+
+
+def test_edge_case_config_233():
+    from inferkit.config import Config
+    assert Config().temperature == 0.7
