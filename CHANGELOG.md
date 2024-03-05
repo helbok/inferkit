@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [2.0.0] - 2024-03-05
+
+### Added
+
+- pydantic v2 support
+- JSON-mode response parsing
+- Python 3.12 in CI
+
+### Changed
+
+- Serialization now uses model_dump
+
 ## [1.5.0] - 2023-08-10
 
 ### Added
