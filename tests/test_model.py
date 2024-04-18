@@ -81,3 +81,9 @@ def test_parse_json_response_invalid():
         {"index": 0, "message": {"role": "assistant", "content": "not json"}},
     ])
     assert parse_json_response(resp) is None
+
+
+def test_edge_case_model_238():
+    from inferkit.model import Message, ModelRequest
+    req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
+    assert req.model == "m"
