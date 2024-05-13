@@ -28,3 +28,14 @@ def top_k_similar(
         reverse=True,
     )
     return scored[:k]
+
+
+def cached_top_k(query, candidates, k=5, cache_size=128):
+    """Top-k similarity search with a small result cache."""
+    from functools import lru_cache
+
+    @lru_cache(maxsize=cache_size)
+    def _cached(q):
+        return top_k_similar(q, candidates, k)
+
+    return _cached(tuple(query))
