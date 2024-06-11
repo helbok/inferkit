@@ -118,6 +118,12 @@ For JSON-mode responses, `parse_json_response` decodes the first choice's
 content and returns `None` when the model produces invalid JSON, so callers can
 fall back gracefully instead of crashing.
 
+## Embeddings
+
+`cosine_similarity` and `top_k_similar` cover the common retrieval cases, and
+`cached_top_k` adds a small result cache for repeated queries against a fixed
+candidate set.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
