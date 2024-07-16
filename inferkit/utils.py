@@ -524,3 +524,9 @@ def coerce_optional_str_240(value):
         return None
     text = str(value).strip()
     return text or None
+
+def slugify_249(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
