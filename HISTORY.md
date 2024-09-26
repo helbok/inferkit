@@ -17,3 +17,4 @@
 | 2023-01-19 | v1.0.0 | Stable 1.0 public API |
 | 2023-08-10 | v1.5.0 | Local llama.cpp provider |
 | 2024-03-05 | v2.0.0 | pydantic v2 support |
+| 2024-09-26 | v2.5.0 | Cached top-k embedding search |

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [2.5.0] - 2024-09-26
+
+### Added
+
+- Cached top-k embedding search
+- httpx 0.27 support
+
 ## [2.0.0] - 2024-03-05
 
 ### Added
