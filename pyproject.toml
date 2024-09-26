@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inferkit"
-version = "2.0.0"
+version = "2.5.0"
 description = "A lightweight toolkit for LLM inference, prompting, and agent workflows."
 readme = "README.md"
 license = { text = "MIT" }
