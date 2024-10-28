@@ -87,3 +87,9 @@ def test_edge_case_model_238():
     from inferkit.model import Message, ModelRequest
     req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
     assert req.model == "m"
+
+
+def test_edge_case_model_262():
+    from inferkit.model import Message, ModelRequest
+    req = ModelRequest(model="m", messages=[Message(role="user", content="hi")])
+    assert req.model == "m"
