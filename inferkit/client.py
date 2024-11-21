@@ -89,3 +89,7 @@ class InferenceClient:
     def batch(self, messages_list, model=None, **kwargs):
         """Run several completions and return their responses in order."""
         return [self.chat(messages, model=model, **kwargs) for messages in messages_list]
+
+    def complete(self, prompt, model=None, **kwargs):
+        """One-shot completion from a plain string prompt."""
+        return self.chat([Message(role="user", content=prompt)], model=model, **kwargs)
