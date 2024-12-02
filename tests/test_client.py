@@ -49,3 +49,9 @@ def test_batch_returns_in_order():
     msgs = [Message(role="user", content="a"), Message(role="user", content="b")]
     responses = client.batch([[m] for m in msgs])
     assert [r.choices[0].message.content for r in responses] == ["ok", "ok"]
+
+
+def test_complete_from_string():
+    client = InferenceClient(Config(), provider=FakeProvider())
+    resp = client.complete("hi")
+    assert resp.choices[0].message.content == "ok"
