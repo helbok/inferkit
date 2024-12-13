@@ -124,6 +124,12 @@ fall back gracefully instead of crashing.
 `cached_top_k` adds a small result cache for repeated queries against a fixed
 candidate set.
 
+## Retry policies
+
+Transient failures are common with hosted models. `Config.max_retries` controls
+how many attempts a client makes, and `inferkit.utils.retry` provides a small
+backoff helper for wrapping your own calls.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
