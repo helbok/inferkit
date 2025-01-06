@@ -71,3 +71,8 @@ def test_edge_case_errors_223():
 def test_edge_case_errors_247():
     from inferkit.errors import InferKitError, ConfigurationError
     assert issubclass(ConfigurationError, InferKitError)
+
+
+def test_edge_case_errors_271():
+    from inferkit.errors import InferKitError, ConfigurationError
+    assert issubclass(ConfigurationError, InferKitError)
