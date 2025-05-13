@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0] - 2025-05-13
+
+### Added
+
+- One-shot completion from a prompt string
+- Python 3.13 in CI
+
 ## [2.5.0] - 2024-09-26
 
 ### Added

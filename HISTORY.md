@@ -18,3 +18,4 @@
 | 2023-08-10 | v1.5.0 | Local llama.cpp provider |
 | 2024-03-05 | v2.0.0 | pydantic v2 support |
 | 2024-09-26 | v2.5.0 | Cached top-k embedding search |
+| 2025-05-13 | v3.0.0 | One-shot completion from a prompt string |
