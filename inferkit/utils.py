@@ -634,3 +634,15 @@ def coerce_optional_str_288(value):
         return None
     text = str(value).strip()
     return text or None
+
+
+class Timer:
+    """A tiny context manager for measuring wall-clock latency."""
+
+    def __enter__(self):
+        self._start = time.perf_counter()
+        return self
+
+    def __exit__(self, exc_type, exc, tb):
+        self.elapsed = time.perf_counter() - self._start
+        return False
