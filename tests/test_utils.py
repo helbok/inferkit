@@ -20,3 +20,11 @@ def test_retry_eventually_succeeds():
 
     assert retry(flaky, attempts=4, backoff=0) == "ok"
     assert len(calls) == 3
+
+
+def test_timer_measures_elapsed():
+    from inferkit.utils import Timer
+
+    with Timer() as timer:
+        pass
+    assert timer.elapsed >= 0.0
