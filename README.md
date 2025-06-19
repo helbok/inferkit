@@ -130,6 +130,12 @@ Transient failures are common with hosted models. `Config.max_retries` controls
 how many attempts a client makes, and `inferkit.utils.retry` provides a small
 backoff helper for wrapping your own calls.
 
+## Observability
+
+Use `inferkit.utils.log_event` for structured log lines and `Timer` to measure
+request latency around inference calls. Both compose cleanly with standard
+logging and tracing setups.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
