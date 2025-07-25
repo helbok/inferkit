@@ -646,3 +646,9 @@ class Timer:
     def __exit__(self, exc_type, exc, tb):
         self.elapsed = time.perf_counter() - self._start
         return False
+
+def slugify_297(text):
+    """Turn arbitrary text into a URL-safe slug."""
+    import re
+    value = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return value or "untitled"
