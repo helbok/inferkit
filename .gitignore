@@ -23,3 +23,4 @@ notebooks/
 *.prof
 notebooks/
 .env.local
+.coverage.*
