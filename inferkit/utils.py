@@ -688,3 +688,9 @@ def load_json_308(path):
     import json
     with open(path, encoding="utf-8") as fh:
         return json.load(fh)
+
+def merge_dicts_311(base, override):
+    """Return a shallow copy of base with override keys applied."""
+    merged = dict(base)
+    merged.update(override)
+    return merged
