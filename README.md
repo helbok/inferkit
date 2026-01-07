@@ -136,6 +136,11 @@ Use `inferkit.utils.log_event` for structured log lines and `Timer` to measure
 request latency around inference calls. Both compose cleanly with standard
 logging and tracing setups.
 
+## Security
+
+Never commit API keys. Load them from environment variables or a secret
+manager, and treat model output as untrusted input inside your application.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
