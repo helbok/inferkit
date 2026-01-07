@@ -24,3 +24,4 @@ notebooks/
 notebooks/
 .env.local
 .coverage.*
+.coverage.*
