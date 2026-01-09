@@ -40,6 +40,8 @@ class StreamBuffer:
 
     def feed(self, text: str) -> Optional[str]:
         """Feed text; return a full chunk once the buffer is large enough."""
+        if not text:
+            return None
         self._buf += text
         if len(self._buf) >= self.chunk_size:
             out, self._buf = self._buf, ""
