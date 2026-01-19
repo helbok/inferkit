@@ -20,3 +20,9 @@ def test_stream_buffer_flush():
     assert buf.feed("ab") is None
     assert buf.feed("cdef") == "abcdef"
     assert buf.flush() == ""
+
+
+def test_stream_buffer_ignores_empty_feed():
+    buf = StreamBuffer(chunk_size=4)
+    assert buf.feed("") is None
+    assert buf.flush() == ""
