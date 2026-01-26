@@ -141,6 +141,10 @@ logging and tracing setups.
 Never commit API keys. Load them from environment variables or a secret
 manager, and treat model output as untrusted input inside your application.
 
+## License
+
+MIT -- see the LICENSE file for the full text.
+
 ## About this project
 
 This repository is a **synthetic educational example**: the project and its
