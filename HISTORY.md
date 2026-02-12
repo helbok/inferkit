@@ -19,3 +19,4 @@
 | 2024-03-05 | v2.0.0 | pydantic v2 support |
 | 2024-09-26 | v2.5.0 | Cached top-k embedding search |
 | 2025-05-13 | v3.0.0 | One-shot completion from a prompt string |
+| 2026-02-12 | v3.4.0 | Latency timer for observability |

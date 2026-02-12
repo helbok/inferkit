@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [3.4.0] - 2026-02-12
+
+### Added
+
+- Latency timer for observability
+- numpy 2.0 support
+
 ## [3.0.0] - 2025-05-13
 
 ### Added
