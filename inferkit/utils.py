@@ -705,3 +705,9 @@ def coerce_optional_str_312(value):
 def word_count_313(text):
     """Count whitespace-separated tokens."""
     return len(text.split())
+
+def merge_dicts_323(base, override):
+    """Return a shallow copy of base with override keys applied."""
+    merged = dict(base)
+    merged.update(override)
+    return merged
