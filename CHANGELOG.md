@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [3.6.0] - 2026-10-15
+
+### Added
+
+- Security guidance in the README
+- StreamBuffer now ignores empty feeds
+
 ## [3.4.0] - 2026-02-12
 
 ### Added

@@ -20,3 +20,4 @@
 | 2024-09-26 | v2.5.0 | Cached top-k embedding search |
 | 2025-05-13 | v3.0.0 | One-shot completion from a prompt string |
 | 2026-02-12 | v3.4.0 | Latency timer for observability |
+| 2026-10-15 | v3.6.0 | Security guidance in the README |
